@@ -40,7 +40,7 @@ const PostSchema = new mongoose.Schema({
     trim: true,
     maxlength: [100, "Text too long!"],
   }
-});
+}, {timestamps: {}});
 
-// mongoose.models = {};
+mongoose.models = {};
 module.exports = mongoose.model.Posts || mongoose.model("Posts", PostSchema);
